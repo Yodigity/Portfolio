@@ -1,0 +1,65 @@
+$text-color-main: #cacaca;
+
+html {
+  height: 100%;
+  background-color: #2f2f2f;
+  box-sizing: border-box;
+  color: $text-color-main;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.App {
+  text-align: center;
+}
+
+.toggle-menu-button {
+  position: relative;
+  z-index: 20;
+  float: right;
+  margin: 0 2.5rem 0 0;
+}
+
+.nav-list {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+  text-align: left;
+
+  li a {
+    color: $text-color-main;
+    font-size: 8vw;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+}
+
+.profile-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-image {
+  border-radius: 50%;
+}
+
+.profile-headline {
+  font-size: 3rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.profile-description {
+  font-size: 2rem;
+}
