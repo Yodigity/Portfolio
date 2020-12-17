@@ -2,6 +2,7 @@ $text-color-main: #cacaca;
 
 html {
   height: 100%;
+  max-height: 100vh;
   background-color: #2f2f2f;
   box-sizing: border-box;
   color: $text-color-main;
@@ -34,32 +35,90 @@ html {
   overflow: hidden;
   text-align: left;
 
-  li a {
-    color: $text-color-main;
-    font-size: 8vw;
-    padding: 0;
-    margin: 0;
-    list-style: none;
+  li {
+    margin: 1.5rem;
+    a {
+      color: $text-color-main;
+      font-size: 8vw;
+      padding: 2rem;
+      margin: 2rem;
+      list-style: none;
+    }
   }
 }
 
 .profile-content {
-  height: 100%;
+  width: 100%;
+  color: #fff;
+  text-shadow: 1px 1px 0 #0b8be7 inset;
+  text-align: center;
+
+  position: relative;
+  z-index: 10;
+  animation: profile ease-in 20s;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transform: translateY(25%);
+
+  .profile-image {
+    border-radius: 50%;
+    animation: imageFadeIn ease-in 1s;
+    opacity: 1;
+    // background: white;
+  }
+
+  .profile-headline {
+    font-size: 1.8em;
+    line-height: 1.7em;
+    font-weight: 700;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    opacity: 1;
+    animation: headlineFadeIn ease-in 2s;
+  }
+
+  .profile-description {
+    justify-content: center;
+    align-self: center;
+    width: 700px;
+    font-size: 1.15em;
+    line-height: 1.125em;
+    opacity: 1;
+    animation: headlineFadeIn ease-in 2s;
+  }
 }
 
-.profile-image {
-  border-radius: 50%;
+@keyframes imageFadeIn {
+  0% {
+    transform: scale(0);
+  }
+
+  80% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
-.profile-headline {
-  font-size: 3rem;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+@keyframes headlineFadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
-.profile-description {
-  font-size: 2rem;
+@keyframes descriptionFadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }

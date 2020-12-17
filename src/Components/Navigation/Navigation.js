@@ -29,6 +29,7 @@ export const Navigation = () => {
       bottom: 0,
       right: 0,
       left: 0,
+      zIndex: 100,
     },
     leave: { opacity: 0, transform: "scale(0.80)" },
     config: config.gentle,
@@ -61,7 +62,7 @@ export const Navigation = () => {
         height: "100%",
       }}
     >
-      <div className='toggle-menu-button' style={{}}>
+      <div className='toggle-menu-button' style={{ zIndex: "101" }}>
         {openButton.map(({ item, key, props }) =>
           !item ? (
             <animated.div key={key} style={props}>

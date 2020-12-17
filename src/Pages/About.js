@@ -3,7 +3,7 @@ import { ProfileIntro } from "../Components/ProfileIntro/ProfileIntro";
 
 export const About = () => {
   return (
-    <div>
+    <div className='profile-content'>
       <ProfileIntro />
     </div>
   );
