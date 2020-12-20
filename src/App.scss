@@ -31,7 +31,6 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   overflow: hidden;
   text-align: left;
 
@@ -49,12 +48,18 @@ html {
 
 .back-arrow {
   margin: auto 0 auto 1.5em;
-  color: #fff;
+
+  a {
+    color: #fff;
+  }
 }
 
 .forward-arrow {
   margin: auto 1.5em auto 0;
-  color: #fff;
+
+  a {
+    color: #fff;
+  }
 }
 
 .profile-content {

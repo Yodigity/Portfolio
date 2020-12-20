@@ -6,11 +6,11 @@ import { ForwardArrow } from "../Components/Navigation/ForwardArrow";
 export const About = () => {
   return (
     <div style={{ display: "flex" }}>
-      <BackArrow />
+      <BackArrow prev='/contact' />
       <div className='profile-content'>
         <ProfileIntro />
       </div>
-      <ForwardArrow />
+      <ForwardArrow next='/portfolio' />
     </div>
   );
 };
