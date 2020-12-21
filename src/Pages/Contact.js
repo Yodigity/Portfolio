@@ -5,7 +5,7 @@ import { ForwardArrow } from "../Components/Navigation/ForwardArrow";
 
 export const Contact = () => {
   return (
-    <div>
+    <div className='contact'>
       <BackArrow prev='/portfolio' />
       <h1>Get In Touch!</h1>
       <ContactForm />

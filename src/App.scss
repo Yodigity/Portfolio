@@ -1,9 +1,11 @@
+$background-color: #2f2f2f;
 $text-color-main: #cacaca;
+$nav-color: #fff;
 
 html {
   height: 100%;
   max-height: 100vh;
-  background-color: #2f2f2f;
+  background-color: $background-color;
   box-sizing: border-box;
   color: $text-color-main;
 }
@@ -36,8 +38,9 @@ html {
 
   li {
     margin: 1.5rem;
+    list-style: none;
     a {
-      color: $text-color-main;
+      color: $nav-color;
       font-size: 8vw;
       padding: 2rem;
       margin: 2rem;
@@ -46,19 +49,26 @@ html {
   }
 }
 
-.back-arrow {
-  margin: auto 0 auto 1.5em;
+.left-nav-arrow {
+  margin: auto 1.5em auto 0;
+  left: 5px;
+  position: absolute;
+
+  top: 50%;
 
   a {
-    color: #fff;
+    color: $nav-color;
   }
 }
 
-.forward-arrow {
-  margin: auto 1.5em auto 0;
+.right-nav-arrow {
+  right: 5px;
+  position: absolute;
+
+  top: 50%;
 
   a {
-    color: #fff;
+    color: $nav-color;
   }
 }
 
@@ -136,5 +146,55 @@ html {
 
   100% {
     opacity: 1;
+  }
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contactForm {
+  width: 80%;
+}
+
+.input-container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+
+  .icon {
+    position: absolute;
+    margin: 0 0 0 2px;
+    overflow: visible;
+    z-index: 200;
+    width: 20px;
+    transform: translateY(5px);
+  }
+
+  .step {
+    width: 80%;
+    height: 100%;
+    padding: 6px 14px 5px 33px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #797979;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: #797979;
+    background-color: $background-color;
+    line-height: 100%;
+  }
+}
+
+.step-nav-buttons {
+  .nav-step {
+    background-color: #cacaca;
+    color: $nav-color;
+    margin: 1em;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 8px;
   }
 }

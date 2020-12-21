@@ -7,7 +7,7 @@ import { dom } from "@fortawesome/fontawesome-svg-core";
 export const ForwardArrow = (props) => {
   const { next } = props;
   return (
-    <div className='forward-arrow' style={{ margin: "auto 1.5em auto 0" }}>
+    <div className='right-nav-arrow' style={{ margin: "auto 1.5em auto 0" }}>
       <Link to={next}>
         <FontAwesomeIcon icon={faArrowRight} size='lg' />
       </Link>

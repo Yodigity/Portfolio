@@ -20,6 +20,7 @@ export const ContactForm = () => {
   const prevStep = () => {
     if (state.currentStep > 1 && state.currentStep <= 3) {
       setState({ ...state, currentStep: state.currentStep - 1 });
+      console.log(state);
     }
   };
 
@@ -27,6 +28,8 @@ export const ContactForm = () => {
     return state.currentStep < 3
       ? setState({ ...state, currentStep: state.currentStep + 1 })
       : null;
+
+    console.log(state);
   };
 
   const handleSubmit = () => {
@@ -34,8 +37,8 @@ export const ContactForm = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={() => handleSubmit()}>
+    <div className='contactForm'>
+      <form onSubmit={() => handleSubmit()} style={{ margin: "2em 0 0 0" }}>
         <StepOne
           currentStep={state.currentStep}
           name={state.name}
@@ -51,20 +54,36 @@ export const ContactForm = () => {
           message={state.message}
           handleChange={handleChange}
         />
-        {state.currentStep == 3 ? <button>Send</button> : ""}
       </form>
 
-      {state.currentStep > 1 && state.currentStep <= 3 ? (
-        <button onClick={() => prevStep()}>Prev</button>
-      ) : (
-        ""
-      )}
+      <div className='step-nav-buttons'>
+        {state.currentStep > 1 && state.currentStep <= 3 ? (
+          <button className='nav-step' onClick={() => prevStep()}>
+            Prev
+          </button>
+        ) : (
+          ""
+        )}
 
-      {state.currentStep < 3 ? (
-        <button onClick={() => nextStep()}>Next</button>
-      ) : (
-        ""
-      )}
+        {state.currentStep < 3 ? (
+          <button className='nav-step' onClick={() => nextStep()}>
+            Next
+          </button>
+        ) : (
+          ""
+        )}
+        {state.currentStep == 3 ? (
+          <button
+            className='nav-step'
+            type='submit'
+            onSubmit={() => handleSubmit()}
+          >
+            Send
+          </button>
+        ) : (
+          ""
+        )}
+      </div>
     </div>
   );
 };

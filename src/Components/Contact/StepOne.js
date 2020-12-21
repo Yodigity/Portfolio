@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 export const StepOne = (props) => {
   const { currentStep } = props;
@@ -6,16 +8,18 @@ export const StepOne = (props) => {
   const renderContent =
     currentStep === 1 ? (
       <div className='form-group'>
-        <label htmlFor='name'>Name</label>
-        <input
-          className='form-control'
-          id='name'
-          name='name'
-          type='text'
-          placeholder='Fill with your name'
-          value={props.name} // Prop: The email input data
-          onChange={props.handleChange} // Prop: Puts data into state
-        />
+        <div class='input-container'>
+          <FontAwesomeIcon icon={faUser} size='lg' class='icon' />
+          <input
+            className='step form-control'
+            id='name'
+            name='name'
+            type='text'
+            placeholder='Fill with your name'
+            value={props.name} // Prop: The email input data
+            onChange={props.handleChange} // Prop: Puts data into state
+          />
+        </div>
       </div>
     ) : (
       ""
