@@ -14,7 +14,7 @@ export const StepTwo = (props) => {
             className='step form-control'
             id='email'
             name='email'
-            type='text'
+            type='email'
             placeholder='Now your email'
             value={props.email} // Prop: The email input data
             onChange={props.handleChange} // Prop: Puts data into state

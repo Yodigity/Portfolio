@@ -53,7 +53,6 @@ html {
   margin: auto 1.5em auto 0;
   left: 5px;
   position: absolute;
-
   top: 50%;
 
   a {
@@ -64,7 +63,6 @@ html {
 .right-nav-arrow {
   right: 5px;
   position: absolute;
-
   top: 50%;
 
   a {
@@ -86,7 +84,6 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transform: translateY(25%);
 
   .profile-image {
     animation: imageFadeIn ease-in 1s;
@@ -155,8 +152,19 @@ html {
   align-items: center;
 }
 
+.contact-text {
+  font-size: 1.15em;
+  line-height: 1.7em;
+  color: #8a8a8a;
+  text-align: left;
+}
+
 .contactForm {
   width: 80%;
+
+  form {
+    transform: translateX(10%);
+  }
 }
 
 .input-container {
