@@ -146,6 +146,16 @@ html {
   }
 }
 
+.portfolio-windows {
+  width: 70%;
+  margin: auto;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-self: center;
+  justify-content: center;
+}
+
 .contact {
   display: flex;
   flex-direction: column;
