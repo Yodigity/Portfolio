@@ -15,20 +15,19 @@ header {
 
 .window {
   background: #fff;
-  width: 25vw;
-  height: 30vh;
+  width: 30vw;
+  height: 27vh;
   margin: 1.4em;
   margin-top: 3vh;
   border: 1px solid #acacac;
   border-radius: 6px;
   box-shadow: 0px 0px 20px #acacac;
+  will-change: transform;
 }
 
 .titlebar {
   background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
+    to left,
     color-stop(0, #ebebeb, color-stop(1, #d5d5d5))
   );
   background: -webkit-linear-gradient(top, #ddd, #d5d5d5);
@@ -147,7 +146,7 @@ header {
 }
 
 .content {
-  padding: 10px;
+  background-color: #f7f7f7;
 }
 
 /* window END */

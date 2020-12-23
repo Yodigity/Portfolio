@@ -1,4 +1,6 @@
 import React from "react";
+import DaisyDrawsGallery from "../Components/Portfolio/DaisyDrawsGallery.jpg";
+import DaisyDrawsAbout from "../Components/Portfolio/DaisyDrawsAbout.jpg";
 import { BackArrow } from "../Components/Navigation/BackArrow";
 import { ForwardArrow } from "../Components/Navigation/ForwardArrow";
 import { PortfolioWindow } from "../Components/Portfolio/PortfolioWindow";
@@ -16,7 +18,11 @@ export const Portfolio = () => {
         </h3>
       </header>
       <div className='portfolio-windows'>
-        <PortfolioWindow />
+        <PortfolioWindow
+          projectName={"Daisy Draws"}
+          pictureStandard={DaisyDrawsGallery}
+          pictureHover={DaisyDrawsAbout}
+        />
         <PortfolioWindow />
         <PortfolioWindow />
         <PortfolioWindow />
