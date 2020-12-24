@@ -1,6 +1,12 @@
 import React from "react";
-import DaisyDrawsGallery from "../Components/Portfolio/DaisyDrawsGallery.jpg";
-import DaisyDrawsAbout from "../Components/Portfolio/DaisyDrawsAbout.jpg";
+import DaisyDrawsGallery from "../Components/Portfolio/Images/DaisyDrawsGallery.jpg";
+import DaisyDrawsAbout from "../Components/Portfolio/Images/DaisyDrawsAbout.jpg";
+import EToEStandard from "../Components/Portfolio/Images/EToEStandard.jpg";
+import EToEHover from "../Components/Portfolio/Images/EToEHover.jpg";
+import ResortStandard from "../Components/Portfolio/Images/ResortStandard.jpg";
+import ResortHover from "../Components/Portfolio/Images/ResortHover.jpg";
+import ExpenseStandard from "../Components/Portfolio/Images/ExpenseStandard.jpg";
+import ExpenseHover from "../Components/Portfolio/Images/ExpenseHover.jpg";
 import { BackArrow } from "../Components/Navigation/BackArrow";
 import { ForwardArrow } from "../Components/Navigation/ForwardArrow";
 import { PortfolioWindow } from "../Components/Portfolio/PortfolioWindow";
@@ -23,9 +29,21 @@ export const Portfolio = () => {
           pictureStandard={DaisyDrawsGallery}
           pictureHover={DaisyDrawsAbout}
         />
-        <PortfolioWindow />
-        <PortfolioWindow />
-        <PortfolioWindow />
+        <PortfolioWindow
+          projectName='Eden to Eternity'
+          pictureStandard={EToEStandard}
+          pictureHover={EToEHover}
+        />
+        <PortfolioWindow
+          projectName='Resort'
+          pictureStandard={ResortStandard}
+          pictureHover={ResortHover}
+        />
+        <PortfolioWindow
+          projectName='Expense Tracker'
+          pictureStandard={ExpenseStandard}
+          pictureHover={ExpenseHover}
+        />
         <PortfolioWindow />
         <PortfolioWindow />
       </div>
