@@ -59,6 +59,14 @@ export const PortfolioWindow = ({
           {/* <!-- window title --> */}
         </div>
         <div class='content'>
+          <div className='overlay'>
+            <div className='tech-pills-container'>
+              <p className='tech-pill'>React</p>
+              <p className='tech-pill'>React</p>
+              <p className='tech-pill'>React</p>
+              <p className='tech-pill'>React</p>
+            </div>
+          </div>
           <img
             src={pictureStandard}
             style={{ width: "100%" }}
