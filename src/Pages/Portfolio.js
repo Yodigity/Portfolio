@@ -28,24 +28,34 @@ export const Portfolio = () => {
           projectName={"Daisy Draws"}
           pictureStandard={DaisyDrawsGallery}
           pictureHover={DaisyDrawsAbout}
+          technologies={["React", "Bootstrap", "CSS Animation"]}
         />
         <PortfolioWindow
           projectName='Eden to Eternity'
           pictureStandard={EToEStandard}
           pictureHover={EToEHover}
+          technologies={[
+            "ReactJS",
+            "Redux",
+            "NodeJS",
+            "Firebase",
+            "MaterialUI",
+          ]}
         />
         <PortfolioWindow
           projectName='Resort'
           pictureStandard={ResortStandard}
           pictureHover={ResortHover}
+          technologies={["HTML5", "CSS", "VanillaJS"]}
         />
         <PortfolioWindow
           projectName='Expense Tracker'
           pictureStandard={ExpenseStandard}
           pictureHover={ExpenseHover}
+          technologies={["ReactJS", "Bootstrap", "ContextAPI"]}
         />
-        <PortfolioWindow />
-        <PortfolioWindow />
+        {/* <PortfolioWindow />
+        <PortfolioWindow /> */}
       </div>
       <ForwardArrow next='/contact' />
     </div>

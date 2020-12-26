@@ -16,7 +16,7 @@ header {
 .window {
   background: #fff;
   width: 25vw;
-  height: 26vh;
+  height: 27vh;
   margin: 3em;
   margin-top: 3vh;
   border: 1px solid #acacac;
@@ -57,10 +57,12 @@ header {
 }
 
 .tech-pills-container {
+  position: relative;
+
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-  margin: auto;
 }
 
 .tech-pill {
@@ -69,6 +71,7 @@ header {
   border-color: aqua;
   padding: 5px;
   margin: 10px;
+  font: 0.8em;
 }
 
 .titlebar {

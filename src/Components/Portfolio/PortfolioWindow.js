@@ -1,6 +1,7 @@
 import React from "react";
 import { useSpring, animated } from "react-spring";
 import "./PortfolioWindow.scss";
+import { TechPill } from "./TechPill";
 
 const calc = (x, y) => [
   -(y - window.innerHeight / 2) / 20,
@@ -14,40 +15,48 @@ export const PortfolioWindow = ({
   projectName,
   pictureHover,
   pictureStandard,
+  technologies,
 }) => {
   const [props, set] = useSpring(() => ({
     xys: [0, 0, 1],
     config: { mass: 5, tension: 350, friction: 40 },
   }));
 
+  const getTechnologies = () => {
+    return technologies.map((technology, index) => {
+      console.log(technology);
+      return <TechPill key={index} tech={technology} />;
+    });
+  };
+
   return (
     <div>
       <animated.div
-        class='window'
+        className='window'
         onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
         onMouseLeave={() => set({ xys: [0, 0, 1] })}
         style={{ transform: props.xys.interpolate(trans) }}
       >
-        <div class='titlebar'>
-          <div class='buttons'>
-            <div class='close'>
-              <div class='closebutton' href='#'>
+        <div className='titlebar'>
+          <div className='buttons'>
+            <div className='close'>
+              <div className='closebutton' href='#'>
                 <span>
                   <strong>x</strong>
                 </span>
               </div>
               {/* <!-- close button link --> */}
             </div>
-            <div class='minimize'>
-              <div class='minimizebutton' href='#'>
+            <div className='minimize'>
+              <div className='minimizebutton' href='#'>
                 <span>
                   <strong>&ndash;</strong>
                 </span>
               </div>
               {/* <!-- minimize button link --> */}
             </div>
-            <div class='zoom'>
-              <div class='zoombutton' href='#'>
+            <div className='zoom'>
+              <div className='zoombutton' href='#'>
                 <span>
                   <strong>+</strong>
                 </span>
@@ -58,18 +67,14 @@ export const PortfolioWindow = ({
           {projectName}
           {/* <!-- window title --> */}
         </div>
-        <div class='content'>
+        <div className='content'>
           <div className='overlay'>
-            <div className='tech-pills-container'>
-              <p className='tech-pill'>React</p>
-              <p className='tech-pill'>React</p>
-              <p className='tech-pill'>React</p>
-              <p className='tech-pill'>React</p>
-            </div>
+            {console.log(getTechnologies())}
+            <div className='tech-pills-container'>{getTechnologies()}</div>
           </div>
           <img
             src={pictureStandard}
-            style={{ width: "100%" }}
+            style={{ width: "100%", height: "100%" }}
             onMouseOver={(e) => (e.target.src = pictureHover)}
             onMouseOut={(e) => (e.target.src = pictureStandard)}
           />
