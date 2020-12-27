@@ -25,7 +25,7 @@ export const PortfolioWindow = ({
   const getTechnologies = () => {
     return technologies.map((technology, index) => {
       console.log(technology);
-      return <TechPill key={index} tech={technology} />;
+      return <TechPill key={index} tech={technology} className='tech-pill' />;
     });
   };
 

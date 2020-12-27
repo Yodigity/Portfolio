@@ -43,9 +43,12 @@ header {
   opacity: 1;
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
   transition: 0.5s ease;
   backface-visibility: hidden;
+  position: absolute;
+  top: 25px;
+  left: 0;
 }
 
 .content:hover .image {
@@ -71,7 +74,7 @@ header {
   border-color: aqua;
   padding: 5px;
   margin: 10px;
-  font: 0.8em;
+  font-size: 0.8em;
 }
 
 .titlebar {
