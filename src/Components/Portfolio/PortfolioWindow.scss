@@ -63,7 +63,7 @@ header {
 
 .tech-pills-container {
   position: relative;
-
+  height: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -71,9 +71,11 @@ header {
 }
 
 .tech-pill {
-  background-color: #f7f7f7;
-  border: solid 5px;
-  border-color: aqua;
+  opacity: 1;
+  background-color: #313131;
+
+  border: solid 1px;
+  border-color: #fff;
   padding: 5px;
   margin: 10px;
   font-size: 0.8em;
