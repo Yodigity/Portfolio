@@ -1,5 +1,6 @@
 import React from "react";
 import { ContactForm } from "../Components/Contact/ContactForm";
+import { Social } from "../Components/Contact/Social";
 import { BackArrow } from "../Components/Navigation/BackArrow";
 import { ForwardArrow } from "../Components/Navigation/ForwardArrow";
 
@@ -20,6 +21,7 @@ export const Contact = () => {
         </p>
       </header>
       <ContactForm />
+      <Social />
       <ForwardArrow next='/' />
     </div>
   );

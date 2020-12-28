@@ -216,3 +216,48 @@ html {
     border-radius: 8px;
   }
 }
+
+.social {
+  text-align: left;
+
+  h4 {
+    font-size: 1.4em;
+    line-height: 1.7em;
+    color: #8a8a8a;
+    font-weight: 700;
+    font-weight: 700;
+    margin: 16px 0 0 0;
+  }
+
+  p {
+    font-size: 1.15em;
+    line-height: 1.7em;
+    color: #8a8a8a;
+    margin: 0 0 16px 0;
+  }
+}
+
+.aws-btn {
+  --button-default-height: 51px;
+  --button-default-font-size: 14px;
+  --button-default-border-radius: 2px;
+  --button-horizontal-padding: 20px;
+  --button-raise-level: 4px;
+  --button-hover-pressure: 1;
+  --transform-speed: 0.175s;
+  --button-primary-color: #1e88e5;
+  --button-primary-color-dark: #1360a4;
+  --button-primary-color-light: #ffffff;
+  --button-primary-color-hover: #187bd1;
+  --button-primary-border: none;
+  --button-secondary-color: #f2f6f9;
+  --button-secondary-color-dark: #1360a4;
+  --button-secondary-color-light: #1e88e5;
+  --button-secondary-color-hover: #e1eaf1;
+  --button-secondary-border: 2px solid #1e88e5;
+  --button-anchor-color: #0e4f88;
+  --button-anchor-color-dark: #072743;
+  --button-anchor-color-light: #ffffff;
+  --button-anchor-color-hover: #0d4a7f;
+  --button-anchor-border: none;
+}
