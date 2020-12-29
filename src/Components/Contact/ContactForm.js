@@ -28,8 +28,6 @@ export const ContactForm = () => {
     return state.currentStep < 3
       ? setState({ ...state, currentStep: state.currentStep + 1 })
       : null;
-
-    console.log(state);
   };
 
   const handleSubmit = () => {

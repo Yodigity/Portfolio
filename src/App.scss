@@ -159,7 +159,16 @@ html {
 .contact {
   display: flex;
   flex-direction: column;
+  align-content: space-between;
   align-items: center;
+}
+
+.contact-header {
+  font-size: 2.625em;
+  line-height: 1.45em;
+  font-weight: 700;
+  letter-spacing: -2px;
+  text-align: left;
 }
 
 .contact-text {
@@ -193,28 +202,31 @@ html {
 
 .input-container {
   display: flex;
-  width: 100%;
+  width: 80%;
   margin-bottom: 15px;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: #797979;
 
   .icon {
-    position: absolute;
-    margin: 0 0 0 2px;
-    overflow: visible;
-    z-index: 200;
+    display: block;
+    opacity: 1;
+    margin: 0 5px 0 0;
+    z-index: 1;
+    left: 7px;
     width: 20px;
-    transform: translateY(5px);
+    height: 18px;
+    top: 11px;
   }
 
   .step {
     width: 80%;
     height: 100%;
-    padding: 6px 14px 10px 33px;
+    padding: 0px 10px 10px 10px;
     font-size: 18px;
     font-weight: 700;
     color: #797979;
-    border-width: 0 0 1px 0;
-    border-style: solid;
-    border-color: #797979;
+    border: none;
     outline: none;
     background-color: $background-color;
     line-height: 100%;

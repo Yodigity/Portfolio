@@ -9,7 +9,7 @@ export const Contact = () => {
     <div className='contact'>
       <BackArrow prev='/portfolio' />
       <header>
-        <h1>Get In Touch!</h1>
+        <h1 className='contact-header'>Get In Touch!</h1>
         <p className='contact-text'>
           If you wanna get in touch, talk to me about a project collaboration or
           just say hi,

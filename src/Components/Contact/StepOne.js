@@ -8,8 +8,8 @@ export const StepOne = (props) => {
   const renderContent =
     currentStep === 1 ? (
       <div className='form-group'>
-        <div class='input-container'>
-          <FontAwesomeIcon icon={faUser} size='lg' class='icon' />
+        <div className='input-container'>
+          <FontAwesomeIcon icon={faUser} size='lg' className='icon' />
           <input
             className='step form-control'
             id='name'
