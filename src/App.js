@@ -1,31 +1,33 @@
-import logo from "./logo.svg";
+import React, { useContext } from "react";
+import { useTransition, animated } from "react-spring";
 import "./App.scss";
 import { Navigation } from "./Components/Navigation/Navigation";
 import { ProfileIntro } from "./Components/ProfileIntro/ProfileIntro";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  __RouterContext,
+} from "react-router-dom";
 import { About } from "./Pages/About";
 import { Portfolio } from "./Pages/Portfolio";
 import { Contact } from "./Pages/Contact";
 
-function App() {
+const App = () => {
   return (
     <div className='App'>
       <Router>
         <Navigation />
         <Switch>
-          <Route exact path='/'>
-            <About />
-          </Route>
-          <Route path='/portfolio'>
-            <Portfolio />
-          </Route>
-          <Route path='/contact'>
-            <Contact />
-          </Route>
+          <Route exact path='/' component={About} />
+
+          <Route path='/portfolio' component={Portfolio} />
+
+          <Route path='/contact' component={Contact} />
         </Switch>
       </Router>
     </div>
   );
-}
+};
 
 export default App;
