@@ -7,11 +7,11 @@ import { PageWrapper } from "../Components/PageWrapper";
 export const About = () => {
   return (
     <PageWrapper>
+      <BackArrow prev='/contact' />
       <div className='profile-content'>
-        <BackArrow prev='/contact' />
         <ProfileIntro />
-        <ForwardArrow next='/portfolio' />
       </div>
+      <ForwardArrow next='/portfolio' />
     </PageWrapper>
   );
 };

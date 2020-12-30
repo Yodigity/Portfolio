@@ -60,9 +60,10 @@ html {
 
 .left-nav-arrow {
   margin: auto 1.5em auto 0;
-  left: 5px;
+  z-index: 20;
   position: absolute;
-  top: 50%;
+  top: 350px;
+  left: 5px;
 
   a {
     color: $nav-color;
@@ -70,9 +71,10 @@ html {
 }
 
 .right-nav-arrow {
-  right: 5px;
+  z-index: 20;
   position: absolute;
-  top: 50%;
+  top: 350px;
+  right: 5px;
 
   a {
     color: $nav-color;
