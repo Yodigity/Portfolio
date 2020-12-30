@@ -10,10 +10,11 @@ import ExpenseHover from "../Components/Portfolio/Images/ExpenseHover.jpg";
 import { BackArrow } from "../Components/Navigation/BackArrow";
 import { ForwardArrow } from "../Components/Navigation/ForwardArrow";
 import { PortfolioWindow } from "../Components/Portfolio/PortfolioWindow";
+import { PageWrapper } from "../Components/PageWrapper";
 
 export const Portfolio = () => {
   return (
-    <div>
+    <PageWrapper>
       <BackArrow prev='/' />
       <header>
         <h1>web developer portfolio</h1>
@@ -58,6 +59,6 @@ export const Portfolio = () => {
         <PortfolioWindow /> */}
       </div>
       <ForwardArrow next='/contact' />
-    </div>
+    </PageWrapper>
   );
 };

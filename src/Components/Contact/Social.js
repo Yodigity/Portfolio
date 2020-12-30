@@ -9,7 +9,7 @@ import AwesomeButtonStyles from "react-awesome-button/src/styles/styles.scss";
 
 export const Social = () => {
   return (
-    <div>
+    <div style={{ margin: "25px auto" }}>
       <div className='social'>
         <h4>Let's get social</h4>
         <p>
