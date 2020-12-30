@@ -17,22 +17,24 @@ export const Navigation = () => {
   const fullscreenMenu = useTransition(isOpen, null, {
     from: {
       opacity: 0,
-      transform: "scale(0.80)",
+      transform: "translateY(-100%)",
+      overflow: "hidden",
     },
     enter: {
       opacity: 1,
-      transform: "scale(1)",
-      backgroundImage: "linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%)",
+      transform: "translateY(0%)",
+      backgroundColor: "#2F2F2F", //"linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%)",
       position: "absolute",
-      maxHeight: "100vh",
+      maxHeight: "99vh",
+      overflow: "hidden",
       top: 0,
       bottom: 0,
       right: 0,
       left: 0,
       zIndex: 100,
     },
-    leave: { opacity: 0, transform: "scale(0.80)" },
-    config: config.gentle,
+    leave: { opacity: 0, transform: "translateY(-100%)" },
+    config: { tension: 50, friction: 13 },
   });
 
   const openButton = useTransition(isOpen, null, {
