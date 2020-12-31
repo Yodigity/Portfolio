@@ -90,7 +90,7 @@ html {
 
   position: relative;
   z-index: 10;
-  animation: profile ease-in 20s;
+  //animation: profile ease-in 20s;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -119,7 +119,41 @@ html {
     font-size: 1.15em;
     line-height: 1.125em;
     opacity: 1;
-    animation: headlineFadeIn ease-in 2s;
+
+    // animation: descripAppear 8s linear 0s infinite alternate;
+    // // animation-name: descripAppear;
+    // // animation-duration: 2s;
+    // // animation-delay: 4s;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: orange;
+    }
+  }
+}
+
+/* The typing effect */
+
+@keyframes descripAppear {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100px;
   }
 }
 
