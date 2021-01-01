@@ -1,4 +1,5 @@
 import React from "react";
+import Fade from "react-reveal/Fade";
 import DaisyDrawsGallery from "../Components/Portfolio/Images/DaisyDrawsGallery.jpg";
 import DaisyDrawsAbout from "../Components/Portfolio/Images/DaisyDrawsAbout.jpg";
 import EToEStandard from "../Components/Portfolio/Images/EToEStandard.jpg";
@@ -19,42 +20,45 @@ export const Portfolio = () => {
       <header>
         <h1>web developer portfolio</h1>
         <h3>
-          From Web Components and UI/UX animations to React.JS, Redux, Vue.JS,
-          and Node.JS. Check out my latest web software development portfolio
+          From Web Components and UI/UX animations to React.JS, Redux, and
+          Node.JS. Check out my latest web software development portfolio
           projects.
         </h3>
       </header>
       <div className='portfolio-windows'>
-        <PortfolioWindow
-          projectName={"Daisy Draws"}
-          pictureStandard={DaisyDrawsGallery}
-          pictureHover={DaisyDrawsAbout}
-          technologies={["React", "Bootstrap", "CSS Animation"]}
-        />
-        <PortfolioWindow
-          projectName='Eden to Eternity'
-          pictureStandard={EToEStandard}
-          pictureHover={EToEHover}
-          technologies={[
-            "ReactJS",
-            "Redux",
-            "NodeJS",
-            "Firebase",
-            "MaterialUI",
-          ]}
-        />
-        <PortfolioWindow
-          projectName='Resort'
-          pictureStandard={ResortStandard}
-          pictureHover={ResortHover}
-          technologies={["HTML5", "CSS", "VanillaJS"]}
-        />
-        <PortfolioWindow
-          projectName='Expense Tracker'
-          pictureStandard={ExpenseStandard}
-          pictureHover={ExpenseHover}
-          technologies={["ReactJS", "Bootstrap", "ContextAPI"]}
-        />
+        <Fade left cascade delay={2500} duration={3000}>
+          <PortfolioWindow
+            projectName={"Daisy Draws"}
+            pictureStandard={DaisyDrawsGallery}
+            pictureHover={DaisyDrawsAbout}
+            technologies={["React", "Bootstrap", "CSS Animation"]}
+          />
+
+          <PortfolioWindow
+            projectName='Eden to Eternity'
+            pictureStandard={EToEStandard}
+            pictureHover={EToEHover}
+            technologies={[
+              "ReactJS",
+              "Redux",
+              "NodeJS",
+              "Firebase",
+              "MaterialUI",
+            ]}
+          />
+          <PortfolioWindow
+            projectName='Resort'
+            pictureStandard={ResortStandard}
+            pictureHover={ResortHover}
+            technologies={["HTML5", "CSS", "VanillaJS"]}
+          />
+          <PortfolioWindow
+            projectName='Expense Tracker'
+            pictureStandard={ExpenseStandard}
+            pictureHover={ExpenseHover}
+            technologies={["ReactJS", "Bootstrap", "ContextAPI"]}
+          />
+        </Fade>
         {/* <PortfolioWindow />
         <PortfolioWindow /> */}
       </div>

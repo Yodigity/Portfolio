@@ -11,11 +11,12 @@ import { Contact } from "./Pages/Contact";
 
 const App = () => {
   const { location } = useContext(__RouterContext);
-  console.log(location);
+
   const transitions = useTransition(location, (location) => location.pathname, {
     from: { opacity: 0, transform: "translate3d(100vw,0,0)" },
     enter: { opacity: 1, transform: "translate3d(0%,0,0)" },
-    leave: { opacity: 0, transform: "translate3d(-50vw,0,0)" },
+    leave: { opacity: 0, transform: "translate3d(-75vw,0,0)" },
+    config: { mass: 1, tension: 50, friction: 18 },
   });
   return (
     <div className='App'>

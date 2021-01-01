@@ -11,7 +11,16 @@ export const ProfileIntro = () => {
   // console.log(letterObject);
 
   return (
-    <div>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        width: "100%",
+        margin: " 0 auto",
+        overflow: "hidden",
+        justifyContent: "center",
+      }}
+    >
       <img
         className='profile-image'
         src={fox}
@@ -19,19 +28,31 @@ export const ProfileIntro = () => {
         width='200'
         height='auto'
       />
-      <div style={{ display: "flex", flexDirection: "column" }}>
+      <div
+      // style={{
+      //   display: "flex",
+      //   flexDirection: "column",
+      //   width: "100%",
+      //   margin: " 0 auto",
+      //   overflow: "hidden",
+      // }}
+      >
         <h3 className='profile-headline'>Hi, I'm Aaron</h3>
 
         <p className='profile-description'>
-          <Fade right cascade delay={1500}>
-            I am a full-stack software developer. Feel free to take a look at my
-            latest projects on my{" "}
+          <Fade right cascade delay={1000} duration={1500}>
+            <p>
+              I am a full-stack software developer with extensive experience in
+              React, NodeJS, C# and more. Feel free to take a look at my latest
+              projects on my{" "}
+            </p>
             <a
               href='/portfolio'
               style={{ color: "#cacaca", fontWeight: "bold" }}
             >
               portfolio page
             </a>
+            <p>Remotely available UTC−1 to UTC+8. email@email.com</p>
           </Fade>
         </p>
       </div>

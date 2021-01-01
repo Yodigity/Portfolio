@@ -15,9 +15,10 @@ header {
 
 .window {
   background: #fff;
-  width: 25vw;
-  height: 27vh;
-  margin: 3em;
+  width: 300px;
+  height: auto;
+  object-fit: contain;
+  margin: 0.5em;
   margin-top: 3vh;
   border: 1px solid #acacac;
   border-radius: 6px;

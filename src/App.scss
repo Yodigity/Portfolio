@@ -99,6 +99,7 @@ html {
   .profile-image {
     animation: imageFadeIn ease-in 1s;
     opacity: 1;
+    margin: auto;
     // background: white;
   }
 
@@ -112,10 +113,12 @@ html {
   }
 
   .profile-description {
-    display: contents;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-self: center;
-    width: 700px;
+    width: 60%;
+    margin: 0 auto;
     font-size: 1.15em;
     line-height: 1.125em;
     opacity: 1;
@@ -193,8 +196,8 @@ html {
 
 .portfolio-windows {
   width: 70%;
-  margin: auto;
-
+  margin: 0 auto;
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-self: center;

@@ -16,10 +16,11 @@ export const Contact = () => {
             If you wanna get in touch, talk to me about a project collaboration
             or just say hi,
             <br />
-            fill up the awesome form below or send an email to
-            <span>
-              <b> email@gmail.com</b>
-            </span>
+            fill up the awesome form below or send an email to{" "}
+            <b style={{ display: "inline-flex", alignContent: "baseline" }}>
+              {" "}
+              email@gmail.com
+            </b>
           </p>
         </header>
         <ContactForm />
