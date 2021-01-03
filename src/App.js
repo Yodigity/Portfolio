@@ -8,6 +8,7 @@ import { useLocation, __RouterContext } from "react-router";
 import { About } from "./Pages/About";
 import { Portfolio } from "./Pages/Portfolio";
 import { Contact } from "./Pages/Contact";
+import { ProjectPreview } from "./Pages/ProjectPreview";
 
 const App = () => {
   const { location } = useContext(__RouterContext);
@@ -16,7 +17,7 @@ const App = () => {
     from: { opacity: 0, transform: "translate3d(100vw,0,0)" },
     enter: { opacity: 1, transform: "translate3d(0%,0,0)" },
     leave: { opacity: 0, transform: "translate3d(-75vw,0,0)" },
-    config: { mass: 1, tension: 50, friction: 18 },
+    config: { mass: 1, tension: 50, friction: 10, clamp: true },
   });
   return (
     <div className='App'>
@@ -29,6 +30,12 @@ const App = () => {
             <Route exact path='/portfolio' component={Portfolio} />
 
             <Route exact path='/contact' component={Contact} />
+
+            <Route
+              exact
+              path='/project'
+              render={(props) => <ProjectPreview {...props} />}
+            />
           </Switch>
         </animated.div>
       ))}

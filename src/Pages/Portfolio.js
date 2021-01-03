@@ -8,6 +8,7 @@ import ResortStandard from "../Components/Portfolio/Images/ResortStandard.jpg";
 import ResortHover from "../Components/Portfolio/Images/ResortHover.jpg";
 import ExpenseStandard from "../Components/Portfolio/Images/ExpenseStandard.jpg";
 import ExpenseHover from "../Components/Portfolio/Images/ExpenseHover.jpg";
+import ChatApp from "../Components/Portfolio/Images/ChatApp.png";
 import { BackArrow } from "../Components/Navigation/BackArrow";
 import { ForwardArrow } from "../Components/Navigation/ForwardArrow";
 import { PortfolioWindow } from "../Components/Portfolio/PortfolioWindow";
@@ -57,6 +58,12 @@ export const Portfolio = () => {
             pictureStandard={ExpenseStandard}
             pictureHover={ExpenseHover}
             technologies={["ReactJS", "Bootstrap", "ContextAPI"]}
+          />
+          <PortfolioWindow
+            projectName='Instant Chat'
+            pictureStandard={ChatApp}
+            pictureHover={ChatApp}
+            technologies={["ReactJS", "Firebase", "MaterialUI"]}
           />
         </Fade>
         {/* <PortfolioWindow />

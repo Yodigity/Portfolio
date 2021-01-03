@@ -1,5 +1,7 @@
 import React from "react";
+import { Link, Route } from "react-router-dom";
 import { useSpring, animated } from "react-spring";
+import { ProjectPreview } from "../../Pages/ProjectPreview";
 import "./PortfolioWindow.scss";
 import { TechPill } from "./TechPill";
 
@@ -37,49 +39,56 @@ export const PortfolioWindow = ({
         onMouseLeave={() => set({ xys: [0, 0, 1] })}
         style={{ transform: props.xys.interpolate(trans) }}
       >
-        <div className='titlebar'>
-          <div className='buttons'>
-            <div className='close'>
-              <div className='closebutton' href='#'>
-                <span>
-                  <strong>x</strong>
-                </span>
+        <Link
+          to={{
+            pathname: "/project",
+            state: { name: projectName, picture: pictureStandard },
+          }}
+        >
+          <div className='titlebar'>
+            <div className='buttons'>
+              <div className='close'>
+                <div className='closebutton' href='#'>
+                  <span>
+                    <strong>x</strong>
+                  </span>
+                </div>
+                {/* <!-- close button Route  --> */}
               </div>
-              {/* <!-- close button link --> */}
-            </div>
-            <div className='minimize'>
-              <div className='minimizebutton' href='#'>
-                <span>
-                  <strong>&ndash;</strong>
-                </span>
+              <div className='minimize'>
+                <div className='minimizebutton' href='#'>
+                  <span>
+                    <strong>&ndash;</strong>
+                  </span>
+                </div>
+                {/* <!-- minimize button link --> */}
               </div>
-              {/* <!-- minimize button link --> */}
-            </div>
-            <div className='zoom'>
-              <div className='zoombutton' href='#'>
-                <span>
-                  <strong>+</strong>
-                </span>
+              <div className='zoom'>
+                <div className='zoombutton' href='#'>
+                  <span>
+                    <strong>+</strong>
+                  </span>
+                </div>
+                {/* <!-- zoom button link --> */}
               </div>
-              {/* <!-- zoom button link --> */}
             </div>
+            {projectName}
+            {/* <!-- window title --> */}
           </div>
-          {projectName}
-          {/* <!-- window title --> */}
-        </div>
-        <div className='content'>
-          <div className='overlay'>
-            {console.log(getTechnologies())}
-            <div className='tech-pills-container'>{getTechnologies()}</div>
+          <div className='content'>
+            <div className='overlay'>
+              {console.log(getTechnologies())}
+              <div className='tech-pills-container'>{getTechnologies()}</div>
+            </div>
+            <img
+              src={pictureStandard}
+              style={{ width: "100%", height: "100%" }}
+              onMouseOver={(e) => (e.target.src = pictureHover)}
+              onMouseOut={(e) => (e.target.src = pictureStandard)}
+            />
+            {/* <!-- window content --> */}
           </div>
-          <img
-            src={pictureStandard}
-            style={{ width: "100%", height: "100%" }}
-            onMouseOver={(e) => (e.target.src = pictureHover)}
-            onMouseOut={(e) => (e.target.src = pictureStandard)}
-          />
-          {/* <!-- window content --> */}
-        </div>
+        </Link>
       </animated.div>
     </div>
   );

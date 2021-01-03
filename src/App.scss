@@ -204,6 +204,17 @@ html {
   justify-content: center;
 }
 
+// Project Preview Page
+
+.project-preview-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+}
+
+// Contact Page
+
 .contact {
   display: flex;
   flex-direction: column;
