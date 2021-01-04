@@ -32,7 +32,14 @@ export const Portfolio = () => {
             projectName={"Daisy Draws"}
             pictureStandard={DaisyDrawsGallery}
             pictureHover={DaisyDrawsAbout}
-            technologies={["React", "Bootstrap", "CSS Animation"]}
+            technologies={[
+              "React",
+              "Bootstrap",
+              "Javascript ES6",
+              "CSS3",
+              "CSS Animations",
+              "HTML5",
+            ]}
             description='Static website for client in order to display a portfolio of various artworks and animations.'
           />
 

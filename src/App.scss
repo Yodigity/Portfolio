@@ -210,7 +210,6 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: auto;
 }
 
 // Contact Page
@@ -322,6 +321,23 @@ html {
     line-height: 1.7em;
     color: #8a8a8a;
     margin: 0 0 16px 0;
+  }
+}
+
+.tech-stack-container {
+  margin: 0 20%;
+  text-align: left;
+
+  .tech-stack-heading {
+    font-size: 1.4em;
+    margin: 1.5em 0 1.1em 0;
+    text-align: left;
+  }
+  .tech-stack-element {
+    list-style: circle;
+    margin: 1em 0;
+    font-size: 1.3em;
+    text-align: left;
   }
 }
 

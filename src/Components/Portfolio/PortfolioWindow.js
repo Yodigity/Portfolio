@@ -47,6 +47,7 @@ export const PortfolioWindow = ({
               name: projectName,
               picture: pictureStandard,
               description: description,
+              techStack: technologies,
             },
           }}
         >

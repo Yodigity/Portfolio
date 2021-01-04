@@ -2,8 +2,8 @@ import React from "react";
 import "../Components/Portfolio/PortfolioWindow.scss";
 
 export const ProjectPreview = (props) => {
-  const { name, picture, description } = props.location.state;
-  console.log(props);
+  const { name, picture, description, techStack } = props.location.state;
+  console.log(techStack);
   return (
     <div>
       <div className='project-preview-container'>
@@ -11,45 +11,79 @@ export const ProjectPreview = (props) => {
           <h1>{name}</h1>
           <p>{description}</p>
         </header>
+        <div>
+          <section>
+            <div
+              className='window'
+              style={{
+                width: "700px",
 
-        <div
-          className='window'
-          style={{ width: "700px", height: "100px", margin: "40px auto" }}
-        >
-          <div className='titlebar'>
-            <div className='buttons'>
-              <div className='close'>
-                <div className='closebutton' href='#'>
-                  <span>
-                    <strong>x</strong>
-                  </span>
+                margin: "40px auto",
+                display: "block",
+              }}
+            >
+              <div className='titlebar'>
+                <div className='buttons'>
+                  <div className='close'>
+                    <div className='closebutton' href='#'>
+                      <span>
+                        <strong>x</strong>
+                      </span>
+                    </div>
+                    {/* <!-- close button link --> */}
+                  </div>
+                  <div className='minimize'>
+                    <div className='minimizebutton' href='#'>
+                      <span>
+                        <strong>&ndash;</strong>
+                      </span>
+                    </div>
+                    {/* <!-- minimize button link --> */}
+                  </div>
+                  <div className='zoom'>
+                    <div className='zoombutton' href='#'>
+                      <span>
+                        <strong>+</strong>
+                      </span>
+                    </div>
+                    {/* <!-- zoom button link --> */}
+                  </div>
                 </div>
-                {/* <!-- close button link --> */}
+                {name}
+                {/* <!-- window title --> */}
               </div>
-              <div className='minimize'>
-                <div className='minimizebutton' href='#'>
-                  <span>
-                    <strong>&ndash;</strong>
-                  </span>
-                </div>
-                {/* <!-- minimize button link --> */}
-              </div>
-              <div className='zoom'>
-                <div className='zoombutton' href='#'>
-                  <span>
-                    <strong>+</strong>
-                  </span>
-                </div>
-                {/* <!-- zoom button link --> */}
+              <div className='content'>
+                <img src={picture} style={{ width: "100%" }} />
+                {/* <!-- window content --> */}
               </div>
             </div>
-            {name}
-            {/* <!-- window title --> */}
-          </div>
-          <div className='content'>
-            <img src={picture} style={{ width: "100%" }} />
-            {/* <!-- window content --> */}
-          </div>
+          </section>
+          {/* About This Project */}
+          <section>
+            <h2>About this project</h2>
+            <p>describe more</p>
+          </section>
+
+          {/* Tech Stack */}
+          <section>
+            <div className='tech-stack-container'>
+              <h4 className='tech-stack-heading'>Tech Stack</h4>
+              <p>
+                Code technologies I got involved with while working on this
+                project.
+              </p>
+              <hr />
+              <ul>
+                {techStack.map((element, index) => {
+                  return (
+                    <li key={index} className='tech-stack-element'>
+                      {element}
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          </section>
         </div>
       </div>
     </div>
