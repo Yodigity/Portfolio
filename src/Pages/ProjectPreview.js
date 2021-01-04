@@ -2,17 +2,19 @@ import React from "react";
 import "../Components/Portfolio/PortfolioWindow.scss";
 
 export const ProjectPreview = (props) => {
-  const { name, picture } = props.location.state;
+  const { name, picture, description } = props.location.state;
   console.log(props);
   return (
     <div>
       <div className='project-preview-container'>
-        <h1>{name}</h1>
-        <p>Description</p>
+        <header>
+          <h1>{name}</h1>
+          <p>{description}</p>
+        </header>
 
         <div
           className='window'
-          style={{ width: "700px", height: "100px", margin: "auto" }}
+          style={{ width: "700px", height: "100px", margin: "40px auto" }}
         >
           <div className='titlebar'>
             <div className='buttons'>

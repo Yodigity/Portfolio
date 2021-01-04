@@ -33,6 +33,7 @@ export const Portfolio = () => {
             pictureStandard={DaisyDrawsGallery}
             pictureHover={DaisyDrawsAbout}
             technologies={["React", "Bootstrap", "CSS Animation"]}
+            description='Static website for client in order to display a portfolio of various artworks and animations.'
           />
 
           <PortfolioWindow
@@ -46,24 +47,28 @@ export const Portfolio = () => {
               "Firebase",
               "MaterialUI",
             ]}
+            description="Social Media web application, inspired by Twitter, allowing users to post 'Talks'. Fully featured comment, like and notification system."
           />
           <PortfolioWindow
             projectName='Resort'
             pictureStandard={ResortStandard}
             pictureHover={ResortHover}
             technologies={["HTML5", "CSS", "VanillaJS"]}
+            description='Front-end of resort booking website, allowing users to view rooms available with dynamic rendering of content based on user set parameters.'
           />
           <PortfolioWindow
             projectName='Expense Tracker'
             pictureStandard={ExpenseStandard}
             pictureHover={ExpenseHover}
             technologies={["ReactJS", "Bootstrap", "ContextAPI"]}
+            description='Web application allowing users to record income and expenses. Implements ContextAPI to distribute state to various components.'
           />
           <PortfolioWindow
             projectName='Instant Chat'
             pictureStandard={ChatApp}
             pictureHover={ChatApp}
             technologies={["ReactJS", "Firebase", "MaterialUI"]}
+            description='Social Media instant messaging system allowing users to send messages and create multiple chat rooms with different users.'
           />
         </Fade>
         {/* <PortfolioWindow />

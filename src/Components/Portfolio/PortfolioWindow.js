@@ -18,6 +18,7 @@ export const PortfolioWindow = ({
   pictureHover,
   pictureStandard,
   technologies,
+  description,
 }) => {
   const [props, set] = useSpring(() => ({
     xys: [0, 0, 1],
@@ -42,7 +43,11 @@ export const PortfolioWindow = ({
         <Link
           to={{
             pathname: "/project",
-            state: { name: projectName, picture: pictureStandard },
+            state: {
+              name: projectName,
+              picture: pictureStandard,
+              description: description,
+            },
           }}
         >
           <div className='titlebar'>
