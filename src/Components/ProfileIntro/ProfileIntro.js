@@ -7,7 +7,7 @@ import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 import fox from "./fox.png";
 
-export const ProfileIntro = () => {
+export const ProfileInfo = () => {
   // console.log(letterObject);
 
   return (
