@@ -1,10 +1,6 @@
 import React from "react";
 
-import {
-  AwesomeButton,
-  AwesomeButtonProgress,
-  AwesomeButtonSocial,
-} from "react-awesome-button";
+import { AwesomeButtonSocial } from "react-awesome-button";
 import AwesomeButtonStyles from "react-awesome-button/src/styles/styles.scss";
 
 export const Social = () => {

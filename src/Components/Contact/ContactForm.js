@@ -70,7 +70,7 @@ export const ContactForm = () => {
         ) : (
           ""
         )}
-        {state.currentStep == 3 ? (
+        {state.currentStep === 3 ? (
           <button
             className='nav-step'
             type='submit'

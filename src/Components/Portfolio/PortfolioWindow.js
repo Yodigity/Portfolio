@@ -1,7 +1,6 @@
 import React from "react";
-import { Link, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useSpring, animated } from "react-spring";
-import { ProjectPreview } from "../../Pages/ProjectPreview";
 import "./PortfolioWindow.scss";
 import { TechPill } from "./TechPill";
 
@@ -28,7 +27,6 @@ export const PortfolioWindow = ({
 
   const getTechnologies = () => {
     return technologies.map((technology, index) => {
-      console.log(technology);
       return <TechPill key={index} tech={technology} className='tech-pill' />;
     });
   };
@@ -85,11 +83,11 @@ export const PortfolioWindow = ({
           </div>
           <div className='content'>
             <div className='overlay'>
-              {console.log(getTechnologies())}
               <div className='tech-pills-container'>{getTechnologies()}</div>
             </div>
             <img
               src={pictureStandard}
+              alt={projectName}
               style={{ width: "100%", height: "100%" }}
               onMouseOver={(e) => (e.target.src = pictureHover)}
               onMouseOut={(e) => (e.target.src = pictureStandard)}

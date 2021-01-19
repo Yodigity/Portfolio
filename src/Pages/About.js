@@ -1,9 +1,8 @@
 import React from "react";
-import { ProfileInfo } from "../Components/ProfileIntro/ProfileIntro";
+import { ProfileInfo } from "../Components/ProfileIntro/ProfileInfo";
 import { BackArrow } from "../Components/Navigation/BackArrow";
 import { ForwardArrow } from "../Components/Navigation/ForwardArrow";
 import { PageWrapper } from "../Components/PageWrapper";
-import { ProjectPreview } from "./ProjectPreview";
 
 export const About = () => {
   return (

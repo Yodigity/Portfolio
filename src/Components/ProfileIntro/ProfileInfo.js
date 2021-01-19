@@ -1,10 +1,5 @@
 import React from "react";
 import Fade from "react-reveal/Fade";
-import { useSprings, animated, useTransition } from "react-spring";
-import { Transition } from "react-spring/renderprops";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
-
 import fox from "./fox.png";
 
 export const ProfileInfo = () => {

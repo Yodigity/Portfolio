@@ -9,7 +9,6 @@ export const ProjectPreview = (props) => {
     explanation,
     techStack,
   } = props.location.state;
-  console.log(techStack);
   return (
     <div>
       <div className='project-preview-container'>
@@ -59,7 +58,7 @@ export const ProjectPreview = (props) => {
                 {/* <!-- window title --> */}
               </div>
               <div className='content'>
-                <img src={picture} style={{ width: "100%" }} />
+                <img src={picture} alt={name} style={{ width: "100%" }} />
                 {/* <!-- window content --> */}
               </div>
             </div>

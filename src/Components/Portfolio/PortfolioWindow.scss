@@ -87,11 +87,11 @@ header {
     to left,
     color-stop(0, #ebebeb, color-stop(1, #d5d5d5))
   );
-  background: -webkit-linear-gradient(top, #ddd, #d5d5d5);
-  background: -moz-linear-gradient(top, #ddd, #d5d5d5);
-  background: -ms-linear-gradient(top, #ddd, #d5d5d5);
-  background: -o-linear-gradient(top, #ddd, #d5d5d5);
-  background: linear-gradient(top, #ddd, #d5d5d5);
+  background: -webkit-linear-gradient(to top, #ddd, #d5d5d5);
+  background: -moz-linear-gradient(to top, #ddd, #d5d5d5);
+  background: -ms-linear-gradient(to top, #ddd, #d5d5d5);
+  background: -o-linear-gradient(to top, #ddd, #d5d5d5);
+  background: linear-gradient(to top, #ddd, #d5d5d5);
   background-color: #ddd;
   width: 100%;
   color: #6a6a6a;

@@ -2,9 +2,9 @@ import React, { useContext } from "react";
 import { useTransition, animated } from "react-spring";
 import "./App.scss";
 import { Navigation } from "./Components/Navigation/Navigation";
-import { ProfileIntro } from "./Components/ProfileIntro/ProfileIntro";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { useLocation, __RouterContext } from "react-router";
+
+import { Switch, Route } from "react-router-dom";
+import { __RouterContext } from "react-router";
 import { About } from "./Pages/About";
 import { Portfolio } from "./Pages/Portfolio";
 import { Contact } from "./Pages/Contact";
@@ -34,7 +34,7 @@ const App = () => {
             <Route
               exact
               path='/project'
-              render={(props) => <ProjectPreview {...props}  />}
+              render={(props) => <ProjectPreview {...props} />}
             />
           </Switch>
         </animated.div>
