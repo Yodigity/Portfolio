@@ -41,6 +41,7 @@ export const Portfolio = () => {
               "HTML5",
             ]}
             description='Static website for client in order to display a portfolio of various artworks and animations.'
+            explanation='The client asked for an effective way to display their own personal projects in a portfolio style. Upon discussion, we agreed that ease of navigation and smooth transitions between each page was essential. Upon completion, the client was very pleased with the result.'
           />
 
           <PortfolioWindow
@@ -55,6 +56,7 @@ export const Portfolio = () => {
               "MaterialUI",
             ]}
             description="Social Media web application, inspired by Twitter, allowing users to post 'Talks'. Fully featured comment, like and notification system."
+            explanation='Communication its rapid growth has been a great interest of mine. I was fascinated by the likes of Twitter and its popularity. As a challenge, I decided to try and create my own version. Key features include the ability to like and comment on others posts, as well as the user receiving notifications.'
           />
           <PortfolioWindow
             projectName='Resort'
@@ -69,6 +71,7 @@ export const Portfolio = () => {
             pictureHover={ExpenseHover}
             technologies={["ReactJS", "Bootstrap", "ContextAPI"]}
             description='Web application allowing users to record income and expenses. Implements ContextAPI to distribute state to various components.'
+            explanation='This project was used to familiarise myself with React using ContectAPI. I felt it was important to be able to broaden my use of state management technology and reduce my reliance on Redux. Upon inspection of Redux it is apparent that it is not suitable for smaller applications.'
           />
           <PortfolioWindow
             projectName='Instant Chat'
@@ -76,6 +79,7 @@ export const Portfolio = () => {
             pictureHover={ChatApp}
             technologies={["ReactJS", "Firebase", "MaterialUI"]}
             description='Social Media instant messaging system allowing users to send messages and create multiple chat rooms with different users.'
+            explanation='As a child, I became fascinated with the fame and workings of Msn messenger. As a challenge, I wanted to create my own version. Key features include the ability to separate conversations into different rooms. Through the use of firebase, users are able t see when their messages have been read.'
           />
         </Fade>
         {/* <PortfolioWindow />

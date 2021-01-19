@@ -2,7 +2,13 @@ import React from "react";
 import "../Components/Portfolio/PortfolioWindow.scss";
 
 export const ProjectPreview = (props) => {
-  const { name, picture, description, techStack } = props.location.state;
+  const {
+    name,
+    picture,
+    description,
+    explanation,
+    techStack,
+  } = props.location.state;
   console.log(techStack);
   return (
     <div>
@@ -60,8 +66,10 @@ export const ProjectPreview = (props) => {
           </section>
           {/* About This Project */}
           <section>
-            <h2>About this project</h2>
-            <p>describe more</p>
+            <div className='tech-stack-container'>
+              <h2>About this project</h2>
+              <p>{explanation}</p>
+            </div>
           </section>
 
           {/* Tech Stack */}

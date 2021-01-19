@@ -19,6 +19,7 @@ export const PortfolioWindow = ({
   pictureStandard,
   technologies,
   description,
+  explanation,
 }) => {
   const [props, set] = useSpring(() => ({
     xys: [0, 0, 1],
@@ -48,6 +49,7 @@ export const PortfolioWindow = ({
               picture: pictureStandard,
               description: description,
               techStack: technologies,
+              explanation: explanation,
             },
           }}
         >

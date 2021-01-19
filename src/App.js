@@ -34,7 +34,7 @@ const App = () => {
             <Route
               exact
               path='/project'
-              render={(props) => <ProjectPreview {...props} />}
+              render={(props) => <ProjectPreview {...props}  />}
             />
           </Switch>
         </animated.div>
